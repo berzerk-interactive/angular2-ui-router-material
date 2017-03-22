@@ -23,8 +23,6 @@ const aboutState = { name: 'about', url: '/about',  component: AboutComponent };
     SidenavOverviewExample,
     HelloComponent,
     AboutComponent,
-    // Hello,
-    // About
   ],
   imports: [
     BrowserModule,
@@ -42,13 +40,3 @@ const aboutState = { name: 'about', url: '/about',  component: AboutComponent };
   ]
 })
 export class AppModule { }
-
-// @Component({
-//   template: '<h3>Hello world!</h3>'
-// })
-// class Hello { }
-//
-// @Component({
-//   template: '<h3>Its the UI-Router hello world app!</h3>'
-// })
-// class About { }
