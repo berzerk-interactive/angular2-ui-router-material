@@ -1,4 +1,6 @@
-# Ng2project
+# Angular2 ui-router material-design Demo
+
+This project is using ui-router and material design
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-rc.1.
 
