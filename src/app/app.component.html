@@ -1,8 +1,15 @@
-<h1>
-  {{title}}
-</h1>
-<a uiSref="hello" uiSrefActive="active">Hello</a>
-<a uiSref="about" uiSrefActive="active">About</a>
-<ui-view></ui-view>
 
-<sidenav-overview-example>Loading Material Docs example...</sidenav-overview-example>
+
+<sidenav-overview-example>
+
+  <md-toolbar color="primary">
+    <span>{{title}} </span>
+    <a md-button uiSref="hello" uiSrefActive="active">hello</a>
+    <a md-button uiSref="about" uiSrefActive="active">about</a>
+    <span class="example-spacer"></span>
+    <md-icon class="example-icon">menu</md-icon>
+  </md-toolbar>
+  <ui-view></ui-view>
+  Loading Material Docs example...
+
+</sidenav-overview-example>

@@ -14,8 +14,8 @@ import { AboutComponent } from './about/about.component';
 
 
 
-let helloState = { name: 'hello', url: '/hello',  component: HelloComponent };
-let aboutState = { name: 'about', url: '/about',  component: AboutComponent };
+const helloState = { name: 'hello', url: '/hello',  component: HelloComponent };
+const aboutState = { name: 'about', url: '/about',  component: AboutComponent };
 
 @NgModule({
   declarations: [
