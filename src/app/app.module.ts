@@ -33,7 +33,7 @@ const aboutState = { name: 'about', url: '/about',  component: AboutComponent };
     MaterialModule,
     UIRouterModule.forRoot({ states: [
       helloState, aboutState
-    ], useHash: true })
+    ], useHash: false })
 
   ],
   providers: [],
