@@ -8,11 +8,8 @@ import 'hammerjs';
 import {UIRouterModule} from 'ui-router-ng2';
 
 import { AppComponent } from './app.component';
-import { SidenavOverviewExample } from './sidenav/sidenav-overview-example';
 import { HelloComponent } from './hello/hello.component';
 import { AboutComponent } from './about/about.component';
-
-
 
 const helloState = { name: 'hello', url: '/hello',  component: HelloComponent };
 const aboutState = { name: 'about', url: '/about',  component: AboutComponent };
@@ -20,11 +17,8 @@ const aboutState = { name: 'about', url: '/about',  component: AboutComponent };
 @NgModule({
   declarations: [
     AppComponent,
-    SidenavOverviewExample,
     HelloComponent,
     AboutComponent,
-    // Hello,
-    // About
   ],
   imports: [
     BrowserModule,
@@ -42,13 +36,3 @@ const aboutState = { name: 'about', url: '/about',  component: AboutComponent };
   ]
 })
 export class AppModule { }
-
-// @Component({
-//   template: '<h3>Hello world!</h3>'
-// })
-// class Hello { }
-//
-// @Component({
-//   template: '<h3>Its the UI-Router hello world app!</h3>'
-// })
-// class About { }
