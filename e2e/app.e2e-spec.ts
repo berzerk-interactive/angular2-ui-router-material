@@ -1,14 +1,17 @@
-import { Ng2projectPage } from './app.po';
+// import { Ng2projectPage } from './app.po';
+import { browser, element, by } from 'protractor';
 
 describe('ng2project App', () => {
-  let page: Ng2projectPage;
+  // let page: Ng2projectPage;
+  //
+  // beforeEach(() => {
+  //   page = new Ng2projectPage();
+  // });
 
-  beforeEach(() => {
-    page = new Ng2projectPage();
-  });
-
-  it('should display message saying app works', () => {
-    page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works! dude');
+  it('should display toolbar', () => {
+    browser.get('/');
+    // page.navigateTo();
+    expect(element(by.css('md-toolbar span')).getText()).toEqual("Demo");
+    // expect(page.getParagraphText()).toEqual('app works! dude');
   });
 });

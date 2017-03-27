@@ -42,10 +42,13 @@ const aboutState = { name: 'about', url: '/about',
     FormsModule,
     HttpModule,
     MaterialModule,
-    UIRouterModule.forRoot({ states: [
-      helloState, aboutState
-    ], useHash: false })
-
+    UIRouterModule.forRoot({
+      states: [
+        helloState, aboutState
+      ],
+      otherwise: { state: 'hello', params: {} },
+      useHash: false
+    })
   ],
   providers: [
     AddressService
