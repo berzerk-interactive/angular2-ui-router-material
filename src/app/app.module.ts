@@ -13,6 +13,9 @@ import { AboutComponent } from './about/about.component';
 import { HelloSidebarComponent } from './hello-sidebar/hello-sidebar.component';
 import { AboutSidebarComponent } from './about-sidebar/about-sidebar.component';
 
+import {AddressService} from './address.service';
+
+
 const helloState = { name: 'hello', url: '/hello',
   views: {
     content: {component: HelloComponent},
@@ -44,7 +47,9 @@ const aboutState = { name: 'about', url: '/about',
     ], useHash: false })
 
   ],
-  providers: [],
+  providers: [
+    AddressService
+  ],
   bootstrap: [
     AppComponent
   ]

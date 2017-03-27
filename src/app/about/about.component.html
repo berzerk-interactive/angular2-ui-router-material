@@ -1,39 +1,53 @@
 <p>
-  about works!
-</p>
-<form class="example-form">
-  <md-input-container class="example-full-width">
+ This view has form which shares its data with the "AddressService" to
+ the sidenav view, which display's the data in the "AboutSidebarComponent"</p>
+
+<form >
+  <md-input-container>
     <input mdInput placeholder="Company (disabled)" disabled value="Google">
   </md-input-container>
-
-  <table class="example-full-width" cellspacing="0"><tr>
-    <td><md-input-container class="example-full-width">
-      <input mdInput placeholder="First name">
+  <table cellspacing="0"><tr>
+    <td><md-input-container>
+      <input mdInput placeholder="First name"
+      [(ngModel)]="address.firstName" name="first name">
     </md-input-container></td>
-    <td><md-input-container class="example-full-width">
-      <input mdInput placeholder="Long Last Name That Will Be Truncated">
+    <td><md-input-container>
+      <input mdInput placeholder="Long Last Name That Will Be Truncated"
+      [(ngModel)]="address.lastName" name="last name">
     </md-input-container></td>
   </tr></table>
 
   <p>
-    <md-input-container class="example-full-width">
-      <textarea mdInput placeholder="Address">1600 Amphitheatre Pkwy</textarea>
+    <md-input-container>
+      <textarea mdInput placeholder="Address"
+      [(ngModel)]="address.address1" name="address1"></textarea>
     </md-input-container>
-    <md-input-container class="example-full-width">
-      <textarea mdInput placeholder="Address 2"></textarea>
+    <md-input-container>
+      <textarea mdInput placeholder="Address 2"
+        [(ngModel)]="address.address2" name="address2"
+      ></textarea>
     </md-input-container>
   </p>
 
-  <table class="example-full-width" cellspacing="0"><tr>
-    <td><md-input-container class="example-full-width">
-      <input mdInput placeholder="City">
+  <table cellspacing="0"><tr>
+    <td><md-input-container>
+      <input mdInput placeholder="City"
+      [(ngModel)]="address.city" name="city">
     </md-input-container></td>
-    <td><md-input-container class="example-full-width">
-      <input mdInput placeholder="State">
+    <td><md-input-container>
+      <input mdInput placeholder="State"
+      [(ngModel)]="address.state" name="state">
     </md-input-container></td>
-    <td><md-input-container class="example-full-width">
-      <input mdInput #postalCode maxlength="5" placeholder="Postal Code" value="94043">
+    <td><md-input-container>
+      <input mdInput #postalCode maxlength="5" placeholder="Postal Code" value="94043"
+      [(ngModel)]="address.postCode" name="postCode">
       <md-hint align="end">{{postalCode.value.length}} / 5</md-hint>
     </md-input-container></td>
   </tr></table>
 </form>
+<p>
+  You can see the "AddressService" service data below:
+</p>
+<pre>
+{{address | json}}
+</pre>

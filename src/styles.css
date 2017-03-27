@@ -23,6 +23,7 @@ body {
 }
 .example-sidenav {
   background: white;
+  max-width: 300px;
 }
 .mat-sidenav-container {
   /*do this better without important*/

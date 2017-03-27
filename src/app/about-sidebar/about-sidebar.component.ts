@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {AddressService} from '../address.service';
 @Component({
   selector: 'app-about-sidebar',
   templateUrl: './about-sidebar.component.html',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutSidebarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private address: AddressService) { }
 
   ngOnInit() {
   }
