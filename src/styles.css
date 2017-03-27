@@ -4,6 +4,7 @@
 body {
   margin: 0 0 0 0 ;
   padding: 0 0 0 0;
+  font-family: Roboto,"Helvetica Neue",sans-serif;
 }
 .example-container {
   width: 100%;
@@ -17,6 +18,9 @@ body {
   justify-content: center;*/
 }
 
+.sidenav-content {
+  padding: 20px;
+}
 .example-sidenav {
   background: white;
 }
