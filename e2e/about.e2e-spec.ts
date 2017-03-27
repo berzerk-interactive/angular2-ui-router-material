@@ -1,7 +1,7 @@
 // import { Ng2projectPage } from './app.po';
 import { browser, element, by } from 'protractor';
 
-describe('Demo App - hello', () => {
+describe('Demo App - about', () => {
   // let page: Ng2projectPage;
   //
   // beforeEach(() => {
@@ -15,8 +15,13 @@ describe('Demo App - hello', () => {
     expect(element(by.css('.mat-sidenav-content > div > md-toolbar > div > md-toolbar-row > span:nth-child(1)')).getText()).toEqual('Demo');
     // expect(page.getParagraphText()).toEqual('app works! dude');
   });
-  it('should be at hello state', () => {
-    expect(browser.getCurrentUrl()).toEqual('http://localhost:49154/hello');
+  it('should have link and navigate to about', () => {
+    const link = element(by.linkText('about'));
+    expect(link.isPresent()).toBe(true);
+    link.click();
+  });
+  it('should be at about state', () => {
+    expect(browser.getCurrentUrl()).toEqual('http://localhost:49154/about');
   });
   it('should have sidebar', () => {
     element(by.css('md-icon')).click();
@@ -24,7 +29,7 @@ describe('Demo App - hello', () => {
     expect(element(by.tagName('md-sidenav')).isDisplayed()).toBe(true);
   });
   it('should have about sidebar content', () => {
-    expect(element(by.css('md-sidenav md-toolbar-row span')).getText()).toEqual('Hello');
-    expect(element(by.css('md-sidenav p')).getText()).toEqual('hello-sidebar works!');
+    expect(element(by.css('md-sidenav md-toolbar-row span')).getText()).toEqual('About');
+    expect(element(by.css('md-sidenav p')).getText()).toEqual('about-sidebar works!');
   });
 });
