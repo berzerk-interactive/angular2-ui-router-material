@@ -1,3 +1,5 @@
+@import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';
+
 /* You can add global styles to this file, and also import other style files */
 body {
   margin: 0 0 0 0 ;
@@ -17,7 +19,6 @@ body {
 
 .example-sidenav {
   background: white;
-  padding: 20px;
 }
 .mat-sidenav-container {
   /*do this better without important*/

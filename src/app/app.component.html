@@ -1,6 +1,6 @@
 <md-sidenav-container class="example-container">
   <md-sidenav #sidenav class="example-sidenav">
-    Jolly good!
+    <ui-view name="sidebar"></ui-view>
   </md-sidenav>
 
   <div class="example-sidenav-content">
@@ -11,7 +11,7 @@
       <span class="example-spacer"></span>
       <md-icon class="example-icon" (click)="sidenav.open()">menu</md-icon>
     </md-toolbar>
-    <ui-view></ui-view>
+    <ui-view name="content"></ui-view>
 
     <button md-button (click)="sidenav.open()">
       Open sidenav
