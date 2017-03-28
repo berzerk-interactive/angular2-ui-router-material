@@ -26,8 +26,37 @@ describe('Demo App - about', () => {
   it('should have sidebar', () => {
     element(by.css('md-icon')).click();
     browser.sleep(500);
-    expect(element(by.tagName('md-sidenav')).isDisplayed()).toBe(true);
+    const sidebar = element(by.tagName('md-sidenav'));
+    expect(sidebar.isDisplayed()).toBe(true);
+    element(by.className('mat-sidenav-backdrop mat-sidenav-shown')).click();
+    browser.sleep(500);
+    expect(sidebar.isDisplayed()).toBe(false);
   });
+
+  it('should have form and display in sidebar', () => {
+    expect(element(by.tagName('form')).isPresent()).toBe(true);
+    element.all(by.tagName('input')).then((array) => {
+      expect(array.length).toBe(6);
+      expect(array[0].getText()).toEqual('');
+    });
+    element(by.css('[name=firstname]')).sendKeys('dude');
+    element(by.buttonText('Open sidenav')).click();
+    browser.sleep(500);
+    expect(element(by.css('pre')).getText())
+    .toEqual(
+`{
+  "firstName": "dude",
+  "lastName": "",
+  "address1": "",
+  "address2": "",
+  "city": "",
+  "state": "",
+  "postCode": ""
+}`);
+
+
+  });
+
   it('should have about sidebar content', () => {
     expect(element(by.css('md-sidenav md-toolbar-row span')).getText()).toEqual('About');
     expect(element(by.css('md-sidenav p')).getText()).toEqual('about-sidebar works!');
