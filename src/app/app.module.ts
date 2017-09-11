@@ -1,11 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 import 'hammerjs';
 
-import {UIRouterModule} from 'ui-router-ng2';
+import {UIRouterModule} from '@uirouter/angular';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello/hello.component';
@@ -39,6 +40,7 @@ const aboutState = { name: 'about', url: '/about',
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     HttpModule,
     MaterialModule,
